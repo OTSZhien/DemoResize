@@ -1,7 +1,7 @@
 #tag Class
 Protected Class App
 Inherits WebApplication
-	#tag Note, Name = Readme
+	#tag Note, Name = Readme First
 		
 		This is a demo program to demonstrate Mobile and Desktop Resizing.
 		
@@ -9,6 +9,14 @@ Inherits WebApplication
 		
 		Therefore, The App object's DefaultWebPage property must be set to WebPage_SiteLoad
 		
+		How to test
+		1. Run this program in Chrome Browser
+		2. Notice the webpage will be loaded and says "Desktop Site Loaded"
+		3. Go to Chrome Developer mode (Ctrl_Alt_I)
+		4. Change the browser mode to a mobile mode.
+		5. Select the display to be an iPhone display.
+		6. Refresh the page
+		7. Notice now the webpage will be loaded and says "Mobile Site Loaded"
 		
 	#tag EndNote
 
@@ -26,7 +34,14 @@ Inherits WebApplication
 		#tag ViewProperty
 			Name="debugMode"
 			Group="Behavior"
-			Type="Integer"
+			InitialValue="True"
+			Type="Boolean"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="debugMobile"
+			Group="Behavior"
+			InitialValue="False"
+			Type="Boolean"
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class

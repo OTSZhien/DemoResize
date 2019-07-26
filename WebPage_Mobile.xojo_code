@@ -63,7 +63,14 @@ Begin WebPage WebPage_Mobile
       Visible         =   True
       Width           =   145
       ZIndex          =   1
+      _DeclareLineRendered=   False
+      _HorizontalPercent=   0.0
+      _IsEmbedded     =   False
+      _Locked         =   False
       _NeedsRendering =   True
+      _OfficialControl=   False
+      _OpenEventFired =   False
+      _VerticalPercent=   0.0
    End
 End
 #tag EndWebPage
@@ -74,6 +81,18 @@ End
 		  
 		End Sub
 	#tag EndEvent
+
+
+	#tag Note, Name = Readme
+		To change the size of this mobile page, simply change its Height and Width in its properties section.
+		
+		About MinHeight or MinWidth (From Xojo)
+		The minimum height of the WebPage. 
+		This setting prevents the contents from being reduced. 
+		If the browser window is smaller than the content, scroll bars appear.
+		It is not possible to prevent the browser from resizing below this size. 
+		
+	#tag EndNote
 
 
 #tag EndWindowCode

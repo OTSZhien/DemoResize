@@ -36,42 +36,6 @@ Begin WebPage WebPage_SiteLoad
    _OpenEventFired =   False
    _ShownEventFired=   False
    _VerticalPercent=   0.0
-   Begin WebLabel Label_NotAllowed
-      Cursor          =   1
-      Enabled         =   True
-      HasFocusRing    =   True
-      Height          =   169
-      HelpTag         =   ""
-      HorizontalCenter=   0
-      Index           =   -2147483648
-      Left            =   531
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      LockVertical    =   False
-      Multiline       =   True
-      Scope           =   0
-      Style           =   "0"
-      TabOrder        =   0
-      Text            =   "You do not have permissions to login to this program.\r\nPlease contact IT."
-      TextAlign       =   2
-      Top             =   81
-      VerticalCenter  =   0
-      Visible         =   False
-      Width           =   538
-      ZIndex          =   1
-      _DeclareLineRendered=   False
-      _HorizontalPercent=   0.0
-      _IsEmbedded     =   False
-      _Locked         =   False
-      _NeedsRendering =   True
-      _OfficialControl=   False
-      _OpenEventFired =   False
-      _VerticalPercent=   0.0
-   End
 End
 #tag EndWebPage
 
@@ -80,7 +44,7 @@ End
 		Sub Shown()
 		  
 		  //Call this immediately whenever this webpage is loaded.
-		  DisplayOperatorSubmitPages()
+		  DetectPagesToShow()
 		  
 		  
 		  
@@ -96,7 +60,7 @@ End
 
 
 	#tag Method, Flags = &h0
-		Sub DisplayOperatorSubmitPages()
+		Sub DetectPagesToShow()
 		  //Show the web page based on a list of supported browsers 
 		  Select Case Session.Browser
 		  Case WebSession.BrowserType.Android
@@ -171,6 +135,13 @@ End
 		  
 		End Sub
 	#tag EndMethod
+
+
+	#tag Note, Name = Readme
+		This is the first webpage the demo should run. It's being use to detect what webpage type to show.
+		
+		
+	#tag EndNote
 
 
 	#tag Property, Flags = &h0
